@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    img {
+      max-width: 200px;
+      margin: 10px;
+    }
+  </style>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+  <div id="image-container"></div>
+
+<script>
+  // Replace these with actual Google Drive image IDs from your public folder
+  
+  const img =[
+      'pic p1.jpg',
+      'pic p2.jpg',
+      'pic p3.jpg'
+  ]
+  
+  
+  const imageIds = [
+    'profile01.jpg',
+    'profile02.jpg',
+    'profile03.jpg',
+    'profile04.jpg',
+    'profile05.jpg',
+    'profile06.jpg',
+    'profile07.jpg',
+    'profile08.jpg',
+    'profile09.jpg',
+    'profile10.jpg',
+    'profile11.jpg',
+    'profile12.jpg',
+    'profile13.jpg',
+    'profile14.jpg',
+    'profile15.jpg',
+    'profile16.jpg',
+    'profile17.jpg',
+    'profile18.jpg',
+    'profile19.jpg',
+    'profile20.jpg',
+    'profile21.jpg',
+    'profile22.jpg',
+    'profile23.jpg',
+    'profile24.jpg',
+    'profile25.jpg',
+    'profile26.jpg',
+    'profile27.jpg',
+    'profile28.jpg',
+    'profile29.jpg',
+    'profile30.jpg',
+    'profile31.jpg',
+    'profile32.jpg',
+    'profile33.jpg',
+    'profile34.jpg',
+    'profile35.jpg',
+    'profile36.jpg',
+    'profile37.jpg',
+    'profile38.jpg',
+  ];
+
+  const imageContainer = document.getElementById('image-container');
+
+  function createDocumentForImage(imageUrl) {
+    const wrapper = document.createElement('div');
+    wrapper.style.border = "1px solid #ccc";
+    wrapper.style.margin = "10px";
+    wrapper.style.padding = "10px";
+    wrapper.style.textAlign = "center";
+
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.alt = "Image from Drive";
+    img.style.maxWidth = "100%";
+
+    wrapper.appendChild(img);
+    return wrapper;
+  }
+
+  function loadImages() {
+  /* @ replace img.forEach with another name last*/
+    imageIds.forEach(id => {
+    
+    /* add URL to  images charge with id */
+    /* U just have to replace URL with the one of gethub @ */
+    /*  
+      const imageUrl = 'http://0.0.0.0:8088/'+id;
+      https://github.com/jamemailes/Crypto-Ambassadors-Would-App/blob/main/profile01.jpg
+       */
+       
+       
+      const imageUrl ="https://github.com/jamemailes/Crypto-Ambassadors-Would-App/blob/main/"+id
+      const imageDoc = createDocumentForImage(imageUrl);
+      imageContainer.appendChild(imageDoc);
+    });
+  }
+
+  loadImages();
+</script>
+</body>
+
+</html>
